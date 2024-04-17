@@ -1,0 +1,373 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* Header */
+
+header {
+    padding-top: 60px;
+    padding-bottom: 140px;
+    background: linear-gradient(to bottom, #6bb4fc, #57a6f4, #4399ef);
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.offer {
+    width: 450px;
+    color: white;
+}
+
+.offer__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.title__span {
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.offer__text {
+    width: 350px;
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.offer__button {
+    width: 230px;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd429;
+    position: relative;
+    /* 1 анимация с transition */
+    transition: all 0.35s;
+}
+
+.offer__button:hover {
+    top: 3px;
+    box-shadow: 5px 5px 10px black;
+}
+
+.header__image {
+    width: 456px;
+    height: 389px;
+}
+
+/* Main */
+
+main {
+    padding-top: 60px;
+    padding-bottom: 90px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main__title {
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.blocks {
+    text-align: center;
+    width: 25%;
+}
+
+.blocks__images {
+    margin-bottom: 15px;
+}
+
+.images__text {
+    font-weight: 100;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Section */
+
+section {
+    background-color: #ecf3f8;
+    padding-top: 60px;
+    padding-bottom: 90px;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.usluga {    
+    background: linear-gradient(to bottom, #6bb4fc, #57a6f4, #4399ef);
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    text-indent: 20px;
+}
+
+button {
+    width: 308px;
+    height: 44px;
+    background-color: #ffd429;
+    border-width: 1px;
+    border-color: gray;
+    position: relative;
+    /* 2 анимация с transition */
+    transition: all 0.35s;
+}
+
+button:hover {
+    top: 3px;
+    box-shadow: 5px 5px 10px black;
+}
+
+/* Footer */
+
+footer {
+    background: linear-gradient(0deg, #72B1E4ff, #5FA5DEff, #4997D7ff, #358AD1ff, #237ECBff, #2886D5ff, #2679C5ff, #236FB7ff, #2164AAff, #145196ff);
+}
+
+.copyright {
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+}
+
+/* 1 анимация с использованием правила keyFrames */
+
+.animation__keyFrames1 {
+	animation: pulse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+ 
+@keyframes pulse {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+    25%{
+        transform: scale3d(2.0, 2.0, 2.0);
+    }
+	50% {
+		transform: scale3d(4.0, 4.0, 4.0);
+	}
+    70% {
+        transform: scale3d(2.0, 2.0, 2.0);
+    }
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+/* 2 анимация с использованием правила keyFrames */
+
+.animation__keyFrames2 {
+    animation: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotateY(1080deg); }
+  17% { transform: rotateY(0deg); }
+}
+
+@-webkit-keyframes rotate {
+  0% { transform: rotateY(1080deg); }
+  17% { transform: rotateY(0deg); }
+} 
+
+/* Adaptation */
+/* Для мобильных устройств */
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        padding-top: 40px;
+        padding-bottom: 100px;
+    }
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .offer {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .offer__button {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .offer__text {
+        width: 90%;
+        margin: 0 auto 40px; 
+    }
+    .header__image {
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    /* Main */
+    main {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .main__title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    .blocks {
+        width: 90%;
+        margin: 0 auto 30px;
+    }
+
+    /* Section */
+    section {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .section__title {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+    input,
+    button {
+        width: 100%;
+    }
+}
+
+/* Для планшетов */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Header */
+    header {
+        padding-top: 50px;
+        padding-bottom: 120px;
+    }
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .wrapper {
+        flex-direction: row;
+    }
+    .offer {
+        width: 45%;
+        text-align: left;
+    }
+    .header__image {
+        width: 50%;
+        height: auto;
+    }
+
+    /* Main */
+    main {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    .main__title {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+    .blocks {
+        width: 30%;
+        margin: 0 3% 30px;
+    }
+
+    /* Section */
+    section {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    .section__title {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+    form {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+/* Для настольных компьютеров */
+@media screen and (min-width: 1025px) {
+    /* Header */
+    header {
+        padding-top: 60px;
+        padding-bottom: 140px;
+    }
+    .container {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* Main */
+    main {
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+    .main__title {
+        font-size: 30px;
+        margin-bottom: 60px;
+    }
+    .blocks {
+        width: 25%;
+        margin: 0 2% 30px;
+    }
+
+    /* Section */
+    section {
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+    .section__title {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    form {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
